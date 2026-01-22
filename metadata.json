@@ -1,0 +1,13 @@
+{
+  "name": "QuickScan ID",
+  "description": "Ultra-fast document scanner and PDF maker. Turn any document into a clean, official PDF in seconds without the bloat.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "androidPermissions": [
+    "android.permission.CAMERA",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.INTERNET"
+  ]
+}

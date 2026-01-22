@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickScan ID - Pro Document Scanner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; }
+        .scanner-focus {
+            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+            border: 2px solid #6366f1;
+        }
+        @keyframes pulse-border {
+            0% { border-color: #6366f1; }
+            50% { border-color: #ffffff; }
+            100% { border-color: #6366f1; }
+        }
+        .anim-pulse-border {
+            animation: pulse-border 2s infinite;
+        }
+        .scan-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #6366f1, transparent);
+            position: absolute;
+            top: 0;
+            z-index: 50;
+            animation: scan-move 2s linear infinite;
+        }
+        @keyframes scan-move {
+            0% { top: 0%; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0?external=react",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client?external=react",
+    "@google/genai": "https://esm.sh/@google/genai@1.38.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.11?external=react,react-dom",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "@heroicons/react/24/outline": "https://esm.sh/@heroicons/react@2.2.0/24/outline?external=react",
+    "@heroicons/react/24/solid": "https://esm.sh/@heroicons/react@2.2.0/24/solid?external=react",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@capacitor/cli": "https://esm.sh/@capacitor/cli@^8.0.1",
+    "@heroicons/react/": "https://esm.sh/@heroicons/react@^2.2.0/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
