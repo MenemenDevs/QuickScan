@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect, useState } from 'react';
-import { XMarkIcon, BoltIcon, PhotoIcon, VideoCameraIcon } from '@heroicons/react/24/outline';
+import { XMarkIcon, VideoCameraIcon } from '@heroicons/react/24/outline';
 
 interface CameraViewProps {
   onCapture: (imageData: string) => void;
@@ -80,7 +80,7 @@ const CameraView: React.FC<CameraViewProps> = ({ onCapture, onCancel }) => {
         <h2 className="text-2xl font-black text-white mb-4">Erişim Gerekli</h2>
         <p className="text-slate-400 text-sm mb-10 max-w-xs leading-relaxed">
           {error} <br /><br />
-          <b>Ayarlar > Uygulamalar > QuickScan ID > İzinler</b> yolunu izleyerek kamerayı aktif edin.
+          <b>Ayarlar &gt; Uygulamalar &gt; QuickScan ID &gt; İzinler</b> yolunu izleyerek kamerayı aktif edin.
         </p>
         <div className="flex flex-col w-full gap-4 max-w-xs">
           <button 
